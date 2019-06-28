@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <script src="../scripts/class.js"></script>
+    <script src="../scripts/functions.js"></script>
+
+
+</head>
+
+<body id='corpo'>
+    <div id="interface"></div>
+    <div id="principal">
+
+    </div>
+    <script>
+        var divInter = document.querySelector('#interface');
+        var divPrinc = document.querySelector('#principal');
+        var divId = 12;
+        var inputId = 24;
+        var botaoId = 0;
+        var dinheiroTotal = 0;
+        var dinheiroAtual = 545.76;
+
+        mostradoresDin();
+
+        var gertrudes = new Empresa("gertrudes", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
+        gertrudes.setImg("../recursosDeImagem/download.png");
+        gertrudes.maker();
+        var energia = new Empresa("energia", 600, 4000, 1000);
+        energia.setImg("../recursosDeImagem/download.png");
+        energia.maker();
+
+    </script>
+</body>
+
+</html>

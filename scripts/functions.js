@@ -1,9 +1,9 @@
-function iniciarConta(nome, id2, idDiv) {
+function iniciarConta(nome, idBotao, idDiv) {
     if(dinheiroAtual >= nome.getPreco()){
         dinheiroAtual -=  nome.getPreco();
         console.log(dinheiroAtual);
         nome.setAtiva(true);
-        nome.ativacao(id2,idDiv);
+        nome.ativacao();
         
     setInterval(function () {
         dinheiroAtual += nome.getValor();
@@ -17,8 +17,10 @@ function iniciarConta(nome, id2, idDiv) {
 function mostradoresDin(){
     var inputDinheroAtual = document.createElement('input');
     inputDinheroAtual.setAttribute('value', 'R$'+dinheiroAtual.toFixed(2));
+    inputDinheroAtual.setAttribute('readonly', 'readonly');
     var inputDinheroTotal = document.createElement('input');
     inputDinheroTotal.setAttribute('value', 'R$'+dinheiroTotal.toFixed(2));
+    inputDinheroTotal.setAttribute('readonly', 'readonly');
     divInter.appendChild(inputDinheroAtual);
     divInter.appendChild(inputDinheroTotal);
     setInterval(function(){

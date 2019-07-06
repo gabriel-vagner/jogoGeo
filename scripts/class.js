@@ -48,27 +48,21 @@ class Empresa {
         return (this.Preco);
     }
     maker() {
-        
-        
-        
-        
-        
+
         var nome = document.createElement('h2');
         nome.setAttribute('class', 'h2Empresas');
         nome.appendChild(document.createTextNode(this.Nome));
         var botao = document.createElement('button');
         botao.setAttribute('class', 'botaoEmpresas');
-        botao.setAttribute('onclick', 'iniciarConta(' + this.Nome + ', '+botaoId+', '+divId+')');
-        botao.setAttribute('id', botaoId);
-        botaoId++;
+        botao.setAttribute('onclick', 'iniciarConta(' + this.Nome + ', '+this.Nome+'Botao, '+this.Nome+'Div)');
+        botao.setAttribute('id', this.Nome+'Botao');
         botao.appendChild(document.createTextNode(this.Preco));
         var img = document.createElement('img');
         img.setAttribute('class', 'imgEmpresas');
         img.setAttribute("src", this.Img);
 
         var divEm = document.createElement('div');
-        divEm.setAttribute('id', divId);
-        divId++;
+        divEm.setAttribute('id', this.Nome+'Div');
         divEm.setAttribute('class', 'empresas');
         divEm.appendChild(nome);
         divEm.appendChild(botao);
@@ -78,15 +72,14 @@ class Empresa {
         divPrinc.appendChild(divEm);
     }
     
-    ativacao(id2, idDiv) {
+    ativacao() {
         if (this.ativa) {
             var mostrador = document.createElement('input');
             mostrador.setAttribute('value', 'R$'+(this.Valor).toFixed(2)+'/'+(this.Tempo)/1000+'s')
             mostrador.setAttribute('readonly', 'readonly');
-            mostrador.setAttribute('id', inputId);
-            inputId++;
-            document.getElementById(idDiv).appendChild(mostrador);
-            document.getElementById(id2).setAttribute('disabled', 'disabled');
+            mostrador.setAttribute('id', this.Nome+'Input');
+            document.getElementById(this.Nome+'Div').appendChild(mostrador);
+            document.getElementById(this.Nome+'Botao').setAttribute('disabled', 'disabled');
             
         }
     }

@@ -2,7 +2,7 @@ class Empresa {
     constructor(_n, _v, _t, _p) {
         this.Img = " "
 
-        this.ativa = false;
+        this.Ativa = -1;
         
         
         this.Nome = _n;
@@ -12,7 +12,7 @@ class Empresa {
     }
 
     setAtiva(_ativa){
-        this.ativa = _ativa;
+        this.Ativa = _ativa;
     }
 
     setImg(_img) {
@@ -31,10 +31,13 @@ class Empresa {
         this.Tempo = _tempo;
     }
 
-    setPreco(_Preco) {
+    setPreco(_preco) {
         this.Preco = _preco;
     }
 
+    getAtiva(){
+        return(this.Ativa);
+    }
     getNome() {
         return (this.Nome);
     }
@@ -54,7 +57,7 @@ class Empresa {
         nome.appendChild(document.createTextNode(this.Nome));
         var botao = document.createElement('button');
         botao.setAttribute('class', 'botaoEmpresas');
-        botao.setAttribute('onclick', 'iniciarConta(' + this.Nome + ', '+this.Nome+'Botao, '+this.Nome+'Div)');
+        botao.setAttribute('onclick', this.Nome+'.iniciarConta('+this.Nome+')');
         botao.setAttribute('id', this.Nome+'Botao');
         botao.appendChild(document.createTextNode(this.Preco));
         var img = document.createElement('img');
@@ -72,15 +75,40 @@ class Empresa {
         divPrinc.appendChild(divEm);
     }
     
+    iniciarConta(nome) {
+        if(dinheiroAtual >= this.getPreco()){
+            dinheiroAtual -=  this.getPreco();
+            this.getAtiva()<10?this.setAtiva(this.getAtiva()+1):console.log();
+            this.ativacao();
+            if(this.getAtiva()<1){    
+                setInterval(function() {
+                    dinheiroAtual += nome.getValor();
+                    dinheiroTotal += nome.getValor();
+                    console.log(dinheiroAtual);
+                    }, nome.getTempo());
+                }
+        }else{
+            alert("sem dinhero");
+        }
+    }
     ativacao() {
-        if (this.ativa) {
+        if (this.Ativa == 0) {
             var mostrador = document.createElement('input');
             mostrador.setAttribute('value', 'R$'+(this.Valor).toFixed(2)+'/'+(this.Tempo)/1000+'s')
             mostrador.setAttribute('readonly', 'readonly');
             mostrador.setAttribute('id', this.Nome+'Input');
             document.getElementById(this.Nome+'Div').appendChild(mostrador);
-            document.getElementById(this.Nome+'Botao').setAttribute('disabled', 'disabled');
+            //document.getElementById(this.Nome+'Botao').setAttribute('disabled', 'disabled');
             
+        }else if(this.Ativa >0 && this.Ativa <=9){
+            this.setValor(this.Valor*2);
+            document.getElementById(this.Nome+'Input').setAttribute('value', 'R$'+(this.Valor).toFixed(2)+'/'+(this.Tempo)/1000+'s');
+            this.setPreco(this.Preco*2);
+            document.getElementById(this.Nome+'Botao').childNodes[0].nodeValue = this.Preco;
+            console.log(this.Ativa);
+        }else{
+            document.getElementById(this.Nome+'Botao').setAttribute('disabled', 'disabled');
+            document.getElementById(this.Nome+'Botao').childNodes[0].nodeValue = '------';
         }
     }
 } 

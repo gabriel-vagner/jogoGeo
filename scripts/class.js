@@ -2,7 +2,7 @@ class Empresa {
     constructor(_n, _v, _t, _p) {
         this.Img = " "
 
-        this.Ativa = -1;
+        this.Ativa = 0;
         
         
         this.Nome = _n;
@@ -78,8 +78,6 @@ class Empresa {
     iniciarConta(nome) {
         if(dinheiroAtual >= this.getPreco()){
             dinheiroAtual -=  this.getPreco();
-            this.getAtiva()<10?this.setAtiva(this.getAtiva()+1):console.log();
-            this.ativacao();
             if(this.getAtiva()<1){    
                 setInterval(function() {
                     dinheiroAtual += nome.getValor();
@@ -87,6 +85,7 @@ class Empresa {
                     console.log(dinheiroAtual);
                     }, nome.getTempo());
                 }
+            this.getAtiva()<=10?this.ativacao():console.log();
         }else{
             alert("sem dinhero");
         }
@@ -97,18 +96,26 @@ class Empresa {
             mostrador.setAttribute('value', 'R$'+(this.Valor).toFixed(2)+'/'+(this.Tempo)/1000+'s')
             mostrador.setAttribute('readonly', 'readonly');
             mostrador.setAttribute('id', this.Nome+'Input');
+            var porcentagem = document.createElement('input');
+            porcentagem.setAttribute('value', 10+'%');
+            porcentagem.setAttribute('readonly', 'readonly');
+            porcentagem.setAttribute('id', this.Nome+'Input2');
             document.getElementById(this.Nome+'Div').appendChild(mostrador);
-            //document.getElementById(this.Nome+'Botao').setAttribute('disabled', 'disabled');
-            
-        }else if(this.Ativa >0 && this.Ativa <=9){
+            document.getElementById(this.Nome+'Div').appendChild(porcentagem);
+            this.setPreco(this.Preco*2);
+            document.getElementById(this.Nome+'Botao').childNodes[0].nodeValue = this.Preco;
+            this.setAtiva(this.getAtiva()+1);
+        }else if(this.Ativa >0 && this.Ativa <9){
             this.setValor(this.Valor*2);
             document.getElementById(this.Nome+'Input').setAttribute('value', 'R$'+(this.Valor).toFixed(2)+'/'+(this.Tempo)/1000+'s');
             this.setPreco(this.Preco*2);
             document.getElementById(this.Nome+'Botao').childNodes[0].nodeValue = this.Preco;
-            console.log(this.Ativa);
+            document.getElementById(this.Nome+'Input2').value = (10*(this.Ativa+1))+'%';
+            this.setAtiva(this.getAtiva()+1);
         }else{
             document.getElementById(this.Nome+'Botao').setAttribute('disabled', 'disabled');
             document.getElementById(this.Nome+'Botao').childNodes[0].nodeValue = '------';
+            document.getElementById(this.Nome+'Input2').value = '100%';
         }
     }
 } 

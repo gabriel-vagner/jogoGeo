@@ -1,13 +1,28 @@
+
 .empresas {
     background-color: aqua;
     border: 5px solid black;
+    width: 300px;
+    display: inline-table;
     
 }
 #interface{
-    float: right;
-    margin-bottom: 10px
+    right: 0; 
+    margin-bottom: 10px;
+    position: absolute;
 }
-
+img{
+    height: 120px;
+    width: 120px;
+}
+#noticias{
+    right: 0;
+    background-color: aquamarine;
+    border: 2px solid black;
+    position: absolute;
+    margin-top: 80px; 
+    width: 175px
+}
 @keyframes btn2{
 
     0%{

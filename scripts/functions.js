@@ -1,4 +1,7 @@
 function indacadoresMaker(){
+    var quebr = document.createElement('br');
+    var quebr1 = document.createElement('br');
+    var quebr2 = document.createElement('br');
     var inputDinheroAtual = document.createElement('input');
     inputDinheroAtual.setAttribute('value', 'R$'+dinheiroAtual.toFixed(2));
     inputDinheroAtual.setAttribute('readonly', 'readonly');
@@ -9,8 +12,11 @@ function indacadoresMaker(){
     inputAno.setAttribute('value', ano);
     inputAno.setAttribute('readonly', 'readonly');
     divInter.appendChild(inputDinheroAtual);
+    divInter.appendChild(quebr);
     divInter.appendChild(inputDinheroTotal);
+    divInter.appendChild(quebr1);
     divInter.appendChild(inputAno);
+    divInter.appendChild(quebr2);
     setInterval(function(){
         inputDinheroAtual.setAttribute('value', 'R$'+dinheiroAtual.toFixed(2));
         inputDinheroTotal.setAttribute('value', 'R$'+dinheiroTotal.toFixed(2));

@@ -24,10 +24,29 @@ function indacadoresMaker(){
     setInterval(function(){
         ano++    
         inputAno.setAttribute('value', ano);
-    }, 60000);
+        noticFix();
+    }, 5000);
 }
 
 function salvar() {
     localStorage.setItem('local', JSON.stringify(rouberto));
 }
 
+function noticFix() {
+    switch (ano) {
+        case 1501:
+            noticCont('um texto ae pra testeddasdasdas sd asda');
+            break;
+    
+        default:
+            break;
+    }
+}
+function noticCont(x){
+    var conteudo = document.createElement('p');
+    var anoText = document.createElement('p');
+    anoText.appendChild(document.createTextNode(ano.toString()+':'));
+    conteudo.appendChild(document.createTextNode(x));
+    asideNotic.appendChild(anoText);
+    asideNotic.appendChild(conteudo);
+}

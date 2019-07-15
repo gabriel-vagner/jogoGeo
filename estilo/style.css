@@ -33,6 +33,7 @@ img{
     margin-top: 80px; 
     width: 175px;
     height: 610px;
+    overflow: auto;
 }
 #menu{
     float: left;

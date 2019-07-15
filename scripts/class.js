@@ -68,8 +68,8 @@ class Empresa {
         divEm.setAttribute('id', this.Nome+'Div');
         divEm.setAttribute('class', 'empresas');
         divEm.appendChild(nome);
-        divEm.appendChild(botao);
         divEm.appendChild(img);
+        divEm.appendChild(botao);
 
 
         divPrinc.appendChild(divEm);

@@ -3,6 +3,13 @@
     margin:0;
     padding: 0;
 }
+iframe{
+    /*border:0;*/
+    float: right;
+    margin-top: 10px;
+    height: 680px;
+    width: 980px;
+}
 .h2Empresas{
     margin: 0px;
 }
@@ -10,8 +17,8 @@
     background-color: aqua;
     border: 5px solid black;
     margin: 2px;
-    width: 245px;
-    height: 225px;
+    width: 235px;
+    height: 215px;
     display: inline-table;
     padding: 0px;
     

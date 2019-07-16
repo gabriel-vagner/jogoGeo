@@ -50,3 +50,11 @@ function noticCont(x){
     asideNotic.appendChild(anoText);
     asideNotic.appendChild(conteudo);
 }
+
+
+function changeEmpre() {
+    iframe.setAttribute('src', 'empresas.html');
+}
+function changeInvest() {
+    iframe.setAttribute('src', 'investidores.html');
+}

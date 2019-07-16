@@ -1,13 +1,16 @@
-function indacadoresMaker(){
+
+function indacadoresMaker() {
     var quebr = document.createElement('br');
     var quebr1 = document.createElement('br');
     var quebr2 = document.createElement('br');
     var inputDinheroAtual = document.createElement('input');
-    inputDinheroAtual.setAttribute('value', 'R$'+dinheiroAtual.toFixed(2));
+    inputDinheroAtual.setAttribute('value', 'R$' + dinheiroAtual.toFixed(2));
     inputDinheroAtual.setAttribute('readonly', 'readonly');
+    inputDinheroAtual.setAttribute('id', 'inputDinheroAtual');
     var inputDinheroTotal = document.createElement('input');
-    inputDinheroTotal.setAttribute('value', 'R$'+dinheiroTotal.toFixed(2));
+    inputDinheroTotal.setAttribute('value', 'R$' + dinheiroTotal.toFixed(2));
     inputDinheroTotal.setAttribute('readonly', 'readonly');
+    inputDinheroTotal.setAttribute('id', 'inputDinheroTotal');
     var inputAno = document.createElement('input');
     inputAno.setAttribute('value', ano);
     inputAno.setAttribute('readonly', 'readonly');
@@ -17,12 +20,12 @@ function indacadoresMaker(){
     divInter.appendChild(quebr1);
     divInter.appendChild(inputAno);
     divInter.appendChild(quebr2);
-    setInterval(function(){
-        inputDinheroAtual.setAttribute('value', 'R$'+dinheiroAtual.toFixed(2));
-        inputDinheroTotal.setAttribute('value', 'R$'+dinheiroTotal.toFixed(2));
-     }, 900);
-    setInterval(function(){
-        ano++    
+    setInterval(function () {
+        inputDinheroAtual.setAttribute('value', 'R$' + dinheiroAtual.toFixed(2));
+        inputDinheroTotal.setAttribute('value', 'R$' + dinheiroTotal.toFixed(2));
+    }, 900);
+    setInterval(function () {
+        ano++
         inputAno.setAttribute('value', ano);
         noticFix();
     }, 5000);
@@ -37,24 +40,16 @@ function noticFix() {
         case 1501:
             noticCont('um texto ae pra testeddasdasdas sd asda');
             break;
-    
+
         default:
             break;
     }
 }
-function noticCont(x){
+function noticCont(x) {
     var conteudo = document.createElement('p');
     var anoText = document.createElement('p');
-    anoText.appendChild(document.createTextNode(ano.toString()+':'));
+    anoText.appendChild(document.createTextNode(ano.toString() + ':'));
     conteudo.appendChild(document.createTextNode(x));
     asideNotic.appendChild(anoText);
     asideNotic.appendChild(conteudo);
-}
-
-
-function changeEmpre() {
-    iframe.setAttribute('src', 'empresas.html');
-}
-function changeInvest() {
-    iframe.setAttribute('src', 'investidores.html');
 }

@@ -1,3 +1,4 @@
+
 class Empresa {
     constructor(_n, _v, _t, _p) {
         this.Img = " "
@@ -82,7 +83,8 @@ class Empresa {
                 setInterval(function () {
                     dinheiroAtual += nome.getValor();
                     dinheiroTotal += nome.getValor();
-                    console.log(dinheiroAtual);
+                    inputDinheroAtual.setAttribute('value', 'R$' + dinheiroAtual.toFixed(2));
+                    inputDinheroTotal.setAttribute('value', 'R$' + dinheiroTotal.toFixed(2));
                 }, nome.getTempo());
             }
             this.getAtiva() <= 10 ? this.ativacao() : console.log();

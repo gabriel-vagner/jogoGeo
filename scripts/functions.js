@@ -38,7 +38,7 @@ function salvar() {
 function noticFix() {
     switch (ano) {
         case 1501:
-            noticCont('um texto ae pra testeddasdasdas sd asda');
+            teste.getAtiva()?console.log('funfa'):noticCont('um texto ae pra testeddasdasdas sd asda');
             break;
 
         default:

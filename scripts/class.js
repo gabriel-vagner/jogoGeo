@@ -1,4 +1,3 @@
-
 class Empresa {
     constructor(_n, _v, _t, _p) {
         this.Img = " "
@@ -26,6 +25,7 @@ class Empresa {
 
     setValor(_valor) {
         this.Valor = _valor;
+        document.getElementById(this.Nome + 'Input')?document.getElementById(this.Nome + 'Input').setAttribute('value', 'R$' + (this.Valor).toFixed(2) + '/' + (this.Tempo) / 1000 + 's'):console.log();
     }
 
     setTempo(_tempo) {
@@ -115,6 +115,8 @@ class Empresa {
             document.getElementById(this.Nome + 'Input2').value = (10 * (this.Ativa + 1)) + '%';
             this.setAtiva(this.getAtiva() + 1);
         } else {
+            this.setValor(this.Valor * 2);
+            document.getElementById(this.Nome + 'Input').setAttribute('value', 'R$' + (this.Valor).toFixed(2) + '/' + (this.Tempo) / 1000 + 's');
             document.getElementById(this.Nome + 'Botao').setAttribute('disabled', 'disabled');
             document.getElementById(this.Nome + 'Botao').childNodes[0].nodeValue = '------';
             document.getElementById(this.Nome + 'Input2').value = '100%';
@@ -162,3 +164,110 @@ function empresasGod() {
     empresa12.maker();
 
 }
+
+class Investidor{
+    constructor(_n, _d, _p, _r){
+        this.Nome = _n;
+        this.Descricao = _d;
+        this.Preco = _p;
+        this.Img = " "; 
+        this.Referencia = _r;
+        this.Ativa = false;
+    }
+    setAtiva(_ativa){
+        this.Ativa = _ativa;
+    }
+    setNome(_nome){
+        this.Nome = _nome;
+    }
+    setDescricao(_desc){
+        this.Descricao = _desc;
+    }
+    setPreco(_preco){
+        this.Preco = _preco;
+    }
+    setImg(_img){
+        this.Img = _img;
+    }
+    getNome(){
+        return this.Nome;
+    }
+    getDescricao(){
+        return this.Descricao;
+    }
+    getPreco(){
+        return this.Preco;
+    }
+    getReferencia(){
+        return this.Referencia;
+    }
+    getAtiva(){
+        return this.Ativa;
+    }
+    maker() {
+
+        var nome = document.createElement('h2');
+        nome.setAttribute('class', 'h2Investidores');
+        nome.appendChild(document.createTextNode(this.Nome));
+        var botao = document.createElement('button');
+        botao.setAttribute('class', 'botaoInvestidores');
+        botao.setAttribute('onclick', this.Nome+'.ativar()');//d
+        botao.setAttribute('id', this.Nome + 'Botao');
+        botao.appendChild(document.createTextNode(this.Preco));
+        var img = document.createElement('img');
+        img.setAttribute('class', 'imgInvestidores');
+        img.setAttribute("src", this.Img);
+        var desc = document.createElement('p');
+        desc.setAttribute('class', 'descricaoInvestidores');
+        desc.appendChild(document.createTextNode(this.Descricao));
+
+        var divIn = document.createElement('div');
+        divIn.setAttribute('id', this.Nome + 'Div');
+        divIn.setAttribute('class', 'investidores');
+        divIn.appendChild(nome);
+        divIn.appendChild(img);
+        divIn.appendChild(botao);
+        divIn.appendChild(desc);
+
+
+        divInvest.appendChild(divIn);
+    }
+    efeito(R){
+    
+    }
+    ativar() {
+        if (dinheiroAtual >= this.getPreco()) {
+            dinheiroAtual -= this.getPreco();
+            this.efeito(this.getReferencia());
+        } else {
+            alert("sem dinhero");
+        }
+    }
+}
+class InvestidorType1 extends Investidor{
+    efeito(R){
+        R.setValor(R.getValor()+(R.getValor()*0.1));
+        document.getElementById(this.Nome + 'Botao').setAttribute('disabled', 'disabled');
+        document.getElementById(this.Nome + 'Botao').childNodes[0].nodeValue = '------';
+        this.setAtiva(true);
+    }
+}
+class InvestidorType2 extends Investidor{
+    efeito(R){
+        cafe.setValor(cafe.getValor()+(cafe.getValor()*0.02)); 
+        cana.setValor(cana.getValor()+(cana.getValor()*0.02)); 
+        soja.setValor(soja.getValor()+(soja.getValor()*0.02)); 
+        tecidos.setValor(tecidos.getValor()+(tecidos.getValor()*0.02));
+        document.getElementById(this.Nome + 'Botao').setAttribute('disabled', 'disabled');
+        document.getElementById(this.Nome + 'Botao').childNodes[0].nodeValue = '------';
+        this.setAtiva(true);
+    }
+}
+class InvestidorType3 extends Investidor{
+    efeito(R){
+        document.getElementById(this.Nome + 'Botao').setAttribute('disabled', 'disabled');
+        document.getElementById(this.Nome + 'Botao').childNodes[0].nodeValue = '------';
+        this.setAtiva(true);
+    }
+}
+var teste = new InvestidorType3('teste', 'uma investimenta de testes', 550.90, empresa1);

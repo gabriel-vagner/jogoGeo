@@ -3,15 +3,14 @@
     margin:0;
     padding: 0;
 }
-iframe{
-    /*border:0;*/
-    float: right;
-    margin-top: 10px;
-    height: 680px;
-    width: 980px;
+body{
+    overflow: hidden;
 }
 .h2Empresas{
     margin: 0px;
+}
+.tela{
+    margin-left: 200px;
 }
 .empresas {
     background-color: aqua;
@@ -25,16 +24,19 @@ iframe{
     
 }
 #interface{
-    right: 0; 
+    
     margin-bottom: 10px;
-    position: absolute;
+    position: fixed;
+    right: 0;
 }
 img{
     height: 120px;
     width: 120px;
 }
 #noticias{
-    float: right;
+    overflow: auto;
+    position: fixed;
+    right:0;
     background-color: aquamarine;
     border: 2px solid black;
     margin-top: 80px; 
@@ -43,7 +45,8 @@ img{
     overflow: auto;
 }
 #menu{
-    float: left;
+    position: fixed;
+    left:0;
     background-color: aquamarine;
     border: 2px solid black;
     margin-top: 80px; 

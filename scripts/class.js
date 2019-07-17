@@ -135,3 +135,30 @@ var empresa9 = new Empresa("empresa9", 500.50, 3000, 545.76); // necessario que 
 var empresa10 = new Empresa("empresa10", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
 var empresa11 = new Empresa("empresa11", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
 var empresa12 = new Empresa("empresa12", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
+function empresasGod() {
+    empresa1.setImg("../recursosDeImagem/download.png");
+    empresa1.maker();
+    empresa2.setImg("../recursosDeImagem/download.png");
+    empresa2.maker();
+    empresa3.setImg("../recursosDeImagem/download.png");
+    empresa3.maker();
+    empresa4.setImg("../recursosDeImagem/download.png");
+    empresa4.maker();
+    empresa5.setImg("../recursosDeImagem/download.png");
+    empresa5.maker();
+    empresa6.setImg("../recursosDeImagem/download.png");
+    empresa6.maker();
+    empresa7.setImg("../recursosDeImagem/download.png");
+    empresa7.maker();
+    empresa8.setImg("../recursosDeImagem/download.png");
+    empresa8.maker();
+    empresa9.setImg("../recursosDeImagem/download.png");
+    empresa9.maker();
+    empresa10.setImg("../recursosDeImagem/download.png");
+    empresa10.maker();
+    empresa11.setImg("../recursosDeImagem/download.png");
+    empresa11.maker();
+    empresa12.setImg("../recursosDeImagem/download.png");
+    empresa12.maker();
+
+}

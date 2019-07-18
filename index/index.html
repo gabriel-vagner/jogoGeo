@@ -24,6 +24,9 @@
         <a href="#principal">Empresas</a><br>
         <a href="#investidores">Investidores</a><br>
         <a href="#miniGame">Joguete</a>
+        <div id="investAtivos">
+            <h4>Investidores ativos:</h4>
+        </div>
     </aside>
     <div id="principal" class='tela'></div>
     <div id="investidores" class='tela'></div>
@@ -35,12 +38,13 @@
         var divPrinc = document.querySelector('#principal');
         var divInvest = document.querySelector('#investidores');
         var divMiniG = document.querySelector('#miniGame');
+        var divInvestAtivos = document.querySelector('#investAtivos');
 
         indacadoresMaker();
 
         empresasGod();
         teste.setImg("../recursosDeImagem/download.png");
-teste.maker();
+        teste.maker();
 
 
 

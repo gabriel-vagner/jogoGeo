@@ -239,6 +239,9 @@ class Investidor{
         if (dinheiroAtual >= this.getPreco()) {
             dinheiroAtual -= this.getPreco();
             this.efeito(this.getReferencia());
+            var invest = document.createElement('p');
+            invest.appendChild(document.createTextNode(this.Nome));
+            divInvestAtivos.appendChild(invest);
         } else {
             alert("sem dinhero");
         }

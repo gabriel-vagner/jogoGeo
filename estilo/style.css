@@ -3,8 +3,20 @@
     margin:0;
     padding: 0;
 }
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+}
 body{
     overflow: hidden;
+}
+#investAtivos{
+    overflow: auto;
+    height: 280px;
+   
 }
 .h2Empresas{
     margin: 0px;
@@ -53,4 +65,5 @@ img{
     margin-top: 80px; 
     width: 175px;
     height: 610px;
+    padding: 5px;
 }

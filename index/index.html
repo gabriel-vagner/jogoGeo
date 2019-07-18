@@ -30,7 +30,9 @@
     </aside>
     <div id="principal" class='tela'></div>
     <div id="investidores" class='tela'></div>
-    <div id="miniGame" class='tela'></div>
+    <div id="miniGame" class='tela'>
+        <iframe id="miniJoguete" src="../miniGame/index.html" frameborder="0"></iframe>
+    </div>
     <script>
         var asideNotic = document.querySelector('#noticias');
         var asideMenu = document.querySelector('#menu');
@@ -42,6 +44,7 @@
 
         indacadoresMaker();
 
+        //sujeito a realoção e alteração(presente nesta posição para fins de teste) 
         empresasGod();
         teste.setImg("../recursosDeImagem/download.png");
         teste.maker();

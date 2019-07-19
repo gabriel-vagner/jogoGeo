@@ -46,7 +46,15 @@ body{
     position: fixed;
     right: 0;
 }
-img{
+.imgNoticias{
+    height: 270px;
+    width: 170px;
+}
+.imgEmpresas{
+    height: 120px;
+    width: 120px;
+}
+.imgInvestidor{
     height: 120px;
     width: 120px;
 }

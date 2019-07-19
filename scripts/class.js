@@ -1,6 +1,6 @@
 class Empresa {
-    constructor(_n, _v, _t, _p) {
-        this.Img = " "
+    constructor(_n, _v, _t, _p, _m) {
+        this.Img = _m
 
         this.Ativa = 0;
 
@@ -125,52 +125,25 @@ class Empresa {
 }
 
 
-var empresa1 = new Empresa("empresa1", 100.60, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa2 = new Empresa("empresa2", 200.60, 4000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa3 = new Empresa("empresa3", 500.50, 5000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa4 = new Empresa("empresa4", 50.50, 6000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa5 = new Empresa("empresa5", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa6 = new Empresa("empresa6", 106.06, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa7 = new Empresa("empresa7", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa8 = new Empresa("empresa8", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa9 = new Empresa("empresa9", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa10 = new Empresa("empresa10", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa11 = new Empresa("empresa11", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-var empresa12 = new Empresa("empresa12", 500.50, 3000, 545.76); // necessario que objeto e atributo nome sejam iguais
-function empresasGod() {
-    empresa1.setImg("../recursosDeImagem/download.png");
-    empresa1.maker();
-    empresa2.setImg("../recursosDeImagem/download.png");
-    empresa2.maker();
-    empresa3.setImg("../recursosDeImagem/download.png");
-    empresa3.maker();
-    empresa4.setImg("../recursosDeImagem/download.png");
-    empresa4.maker();
-    empresa5.setImg("../recursosDeImagem/download.png");
-    empresa5.maker();
-    empresa6.setImg("../recursosDeImagem/download.png");
-    empresa6.maker();
-    empresa7.setImg("../recursosDeImagem/download.png");
-    empresa7.maker();
-    empresa8.setImg("../recursosDeImagem/download.png");
-    empresa8.maker();
-    empresa9.setImg("../recursosDeImagem/download.png");
-    empresa9.maker();
-    empresa10.setImg("../recursosDeImagem/download.png");
-    empresa10.maker();
-    empresa11.setImg("../recursosDeImagem/download.png");
-    empresa11.maker();
-    empresa12.setImg("../recursosDeImagem/download.png");
-    empresa12.maker();
-
-}
+var Café = new Empresa("Café", 100.60, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Soja = new Empresa("Soja", 200.60, 4000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Cana = new Empresa("Cana", 500.50, 5000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Tecidos = new Empresa("Tecidos", 50.50, 6000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Automobilística = new Empresa("Automobilística", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Eletrodomésticos = new Empresa("Eletrodomésticos", 106.06, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Bélica = new Empresa("Bélica", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Farmacêutica = new Empresa("Farmacêutica", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Petróleo = new Empresa("Petróleo", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Softwares = new Empresa("Softwares", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Streaming = new Empresa("Streaming", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Inteligência_Artificial = new Empresa("Inteligência_Artificial", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 
 class Investidor{
-    constructor(_n, _d, _p, _r){
+    constructor(_n, _d, _p, _r, _m){
         this.Nome = _n;
         this.Descricao = _d;
         this.Preco = _p;
-        this.Img = " "; 
+        this.Img = _m; 
         this.Referencia = _r;
         this.Ativa = false;
     }
@@ -273,4 +246,4 @@ class InvestidorType3 extends Investidor{
         this.setAtiva(true);
     }
 }
-var teste = new InvestidorType3('teste', 'uma investimenta de testes', 550.90, empresa1);
+var teste = new InvestidorType3('teste', 'uma investimenta de testes', 550.90,Cana,"../recursosDeImagem/download.png");

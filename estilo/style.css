@@ -25,6 +25,7 @@ body{
    
 }
 .h2Empresas{
+    font-size: 25px; 
     margin: 0px;
 }
 .tela{
@@ -37,7 +38,7 @@ body{
     background-color: aqua;
     border: 5px solid black;
     margin: 2px;
-    width: 235px;
+    width: 240px;
     height: 215px;
     display: inline-table;
 }

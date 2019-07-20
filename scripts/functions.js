@@ -3,10 +3,23 @@ function comandos() {//comandos do console
     if (event.keyCode == 39) {
         comando = prompt('CONSOLE DE COMANDO');
         switch (comando) {
-            case "":
-                
+            case "demo":
+                dinheiroAtual = 9000000000;
+                ano = 6000;
+                Café.maker();
+                Soja.maker();
+                Cana.maker();
+                Tecidos.maker();
+                Automobilística.maker();
+                Eletrodomésticos.maker();
+                Bélica.maker();
+                Farmacêutica.maker();
+                Petróleo.maker();
+                Softwares.maker();
+                Streaming.maker();
+                Inteligência_Artificial.maker();
                 break;
-        
+
             default:
                 break;
         }

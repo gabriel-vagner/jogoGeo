@@ -89,7 +89,7 @@ class Empresa {
             }
             this.getAtiva() <= 10 ? this.ativacao() : console.log();
         } else {
-            alert("sem dinhero");
+            alert("dinheiro insuficiente");
         }
     }
     ativacao() {
@@ -123,8 +123,6 @@ class Empresa {
         }
     }
 }
-
-
 var Café = new Empresa("Café", 100.60, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Soja = new Empresa("Soja", 200.60, 4000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Cana = new Empresa("Cana", 500.50, 5000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
@@ -219,6 +217,9 @@ class Investidor{
             alert("sem dinhero");
         }
     }
+    remove(){
+        divInvest.removeChild(document.getElementById(this.Nome + 'Div'));
+    }
 }
 class InvestidorType1 extends Investidor{
     efeito(R){
@@ -230,10 +231,10 @@ class InvestidorType1 extends Investidor{
 }
 class InvestidorType2 extends Investidor{
     efeito(R){
-        cafe.setValor(cafe.getValor()+(cafe.getValor()*0.02)); 
-        cana.setValor(cana.getValor()+(cana.getValor()*0.02)); 
-        soja.setValor(soja.getValor()+(soja.getValor()*0.02)); 
-        tecidos.setValor(tecidos.getValor()+(tecidos.getValor()*0.02));
+        Café.setValor(Café.getValor()+(Café.getValor()*0.02)); 
+        Cana.setValor(Cana.getValor()+(Cana.getValor()*0.02)); 
+        Soja.setValor(Soja.getValor()+(Soja.getValor()*0.02)); 
+        Tecidos.setValor(Tecidos.getValor()+(Tecidos.getValor()*0.02));
         document.getElementById(this.Nome + 'Botao').setAttribute('disabled', 'disabled');
         document.getElementById(this.Nome + 'Botao').childNodes[0].nodeValue = '------';
         this.setAtiva(true);
@@ -246,4 +247,12 @@ class InvestidorType3 extends Investidor{
         this.setAtiva(true);
     }
 }
-var teste = new InvestidorType3('teste', 'uma investimenta de testes', 550.90,Cana,"../recursosDeImagem/download.png");
+var none = 'investidores sem influencia direta em algum valor de uma empresa';
+
+var Claudio = new InvestidorType2('Claudio', 'Dono de Terras Férteis',0.00,none,"../recursosDeImagem/download.png");
+var Bruna = new InvestidorType1('Bruna', 'Máquinas para Moer Café',0.00,Café,"../recursosDeImagem/download.png");
+var Julio = new InvestidorType1('Julio', 'Escravos para Moer Cana',0.00,Cana,"../recursosDeImagem/download.png");
+var Cleyton = new InvestidorType1('Cleyton', 'Lotes de Plantação de Algodão',0.00,Tecidos,"../recursosDeImagem/download.png");
+var Gertrudes = new InvestidorType3('Gertrudes', 'Vendedora de Leite, Procura Parceria',0.00,none,"../recursosDeImagem/download.png");
+var Bruno = new InvestidorType3('Bruno', 'Vendedor de Caldo-de-Cana',0.00,none,"../recursosDeImagem/download.png");
+var Landa = new InvestidorType3('Landa', 'A Costureira',0.00,none,"../recursosDeImagem/download.png");

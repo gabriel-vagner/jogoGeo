@@ -1,3 +1,17 @@
+document.addEventListener("keypress", comandos);// console para comandos de teste e facil demonstração do jogo
+function comandos() {//comandos do console
+    if (event.keyCode == 39) {
+        comando = prompt('CONSOLE DE COMANDO');
+        switch (comando) {
+            case "":
+                
+                break;
+        
+            default:
+                break;
+        }
+    }
+}
 function indacadoresMaker() {
     var quebr = document.createElement('br');
     var quebr1 = document.createElement('br');
@@ -29,7 +43,7 @@ function indacadoresMaker() {
         noticFix();
     }, 5000);
 }
-function salvar() {
+function salvar() { // talvez nao seja utilizada
     localStorage.setItem('local', JSON.stringify(rouberto));
 }
 

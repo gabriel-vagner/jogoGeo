@@ -18,6 +18,15 @@ function comandos() {//comandos do console
                 Softwares.maker();
                 Streaming.maker();
                 Inteligência_Artificial.maker();
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 1.png')
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 2.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 3.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 4.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 5.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 6.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 7.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 8.png');
+                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
                 break;
 
             default:
@@ -81,18 +90,18 @@ function noticFix() {
             dinheiroAtual -= 0.00
             break;
         case 1870:
-            Cana.setValor(Cana.getValor() -= Cana.getValor() * 0.2);
-            Café.setValor(Café.getValor() -= Café.getValor() * 0.5);
-            Tecidos.setValor(Tecidos.getValor() -= Tecidos.getValor() * 0.1);
+            Cana.setValor(Cana.getValor() - (Cana.getValor() * 0.2));
+            Café.setValor(Café.getValor() - (Café.getValor() * 0.5));
+            Tecidos.setValor(Tecidos.getValor() - (Tecidos.getValor() * 0.1));
             Bélica.maker();
             break;
         case 1889:
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 3.png');
             break;
         case 1914:
-            Bélica.setValor(Bélica.getValor() += Bélica.getValor() * 0.7);
-            Automobilística.setValor(Automobilística.getValor() -= Automobilística.getValor() * 0.2);
-            Eletrodomésticos.setValor(Eletrodomésticos.getValor() -= Eletrodomésticos.getValor() * 0.3);
+            Bélica.setValor(Bélica.getValor() + (Bélica.getValor() * 0.7));
+            Automobilística.setValor(Automobilística.getValor() - (Automobilística.getValor() * 0.2));
+            Eletrodomésticos.setValor(Eletrodomésticos.getValor() - (Eletrodomésticos.getValor() * 0.3));
             Farmacêutica.maker();
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 4.png');
             break;
@@ -104,8 +113,8 @@ function noticFix() {
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 6.png');
             break;
         case 1980:
-            Farmacêutica.setValor(Farmacêutica.getValor() -= Farmacêutica.getValor() * 0.6);
-            Petróleo.setValor(Petróleo.getValor() -= Petróleo.getValor() * 0.4);
+            Farmacêutica.setValor(Farmacêutica.getValor() - (Farmacêutica.getValor() * 0.6));
+            Petróleo.setValor(Petróleo.getValor() - (Petróleo.getValor() * 0.4));
             break;
         case 1985:
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 7.png');
@@ -121,10 +130,10 @@ function noticFix() {
             break;
         case 2011:
             Inteligência_Artificial.maker();
-            Softwares.setValor(Softwares.getValor() -= Softwares.getValor() * 0.5);
+            Softwares.setValor(Softwares.getValor() - (Softwares.getValor() * 0.5));
             break;
         case 2020:
-            Inteligência_Artificial.setValor(Inteligência_Artificial.getValor() += Inteligência_Artificial.getValor() * 10);
+            Inteligência_Artificial.setValor(Inteligência_Artificial.getValor() + (Inteligência_Artificial.getValor() * 10));
             dinheiroAtual = 999999999999999.90
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
             break;

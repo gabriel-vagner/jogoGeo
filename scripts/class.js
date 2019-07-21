@@ -55,7 +55,7 @@ class Empresa {
 
         var nome = document.createElement('h2');
         nome.setAttribute('class', 'h2Empresas');
-        nome.appendChild(document.createTextNode(this.Nome));
+        nome.appendChild(document.createTextNode((this.Nome).replace(/_/i, ' ')));
         var botao = document.createElement('button');
         botao.setAttribute('class', 'botaoEmpresas');
         botao.setAttribute('onclick', this.Nome + '.iniciarConta(' + this.Nome + ')');
@@ -123,13 +123,13 @@ class Empresa {
         }
     }
 }
-var Café = new Empresa("Café", 100.60, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Soja = new Empresa("Soja", 200.60, 4000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Cana = new Empresa("Cana", 500.50, 5000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Tecidos = new Empresa("Tecidos", 50.50, 6000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Automobilística = new Empresa("Automobilística", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Eletrodomésticos = new Empresa("Eletrodomésticos", 106.06, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Bélica = new Empresa("Bélica", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Café = new Empresa("Café", 100.00, 4000, 500,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Soja = new Empresa("Soja", 150.00, 3000, 700,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Cana = new Empresa("Cana", 50.00, 2000, 250,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Tecidos = new Empresa("Tecidos", 75, 2000, 300,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Automobilística = new Empresa("Automobilística", 250.00, 3000, 4000.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Eletrodomésticos = new Empresa("Eletrodomésticos", 300.00,4000, 3500.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Bélica = new Empresa("Bélica", 80000, 5000, 800000,"../recursosDeImagem/download.png");
 var Farmacêutica = new Empresa("Farmacêutica", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Petróleo = new Empresa("Petróleo", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Softwares = new Empresa("Softwares", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
@@ -179,7 +179,7 @@ class Investidor{
 
         var nome = document.createElement('h2');
         nome.setAttribute('class', 'h2Investidores');
-        nome.appendChild(document.createTextNode(this.Nome));
+        nome.appendChild(document.createTextNode(this.Nome.replace(/_/i, ' ')));
         var botao = document.createElement('button');
         botao.setAttribute('class', 'botaoInvestidores');
         botao.setAttribute('onclick', this.Nome+'.ativar()');//d
@@ -256,3 +256,4 @@ var Cleyton = new InvestidorType1('Cleyton', 'Lotes de Plantação de Algodão',
 var Gertrudes = new InvestidorType3('Gertrudes', 'Vendedora de Leite, Procura Parceria',0.00,none,"../recursosDeImagem/download.png");
 var Bruno = new InvestidorType3('Bruno', 'Vendedor de Caldo-de-Cana',0.00,none,"../recursosDeImagem/download.png");
 var Landa = new InvestidorType3('Landa', 'A Costureira',0.00,none,"../recursosDeImagem/download.png");
+

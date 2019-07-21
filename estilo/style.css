@@ -28,13 +28,26 @@ body{
     font-size: 25px; 
     margin: 0px;
 }
+.h2Investidores{
+    font-size: 25px; 
+    margin: 0px;
+}
 .tela{
     margin-left: 200px;
     margin-bottom: 50px;
-    width: 1000px;
+    width: 980px;
     height: 760px;
+    overflow: auto;
 }
 .empresas {
+    background-color: aqua;
+    border: 5px solid black;
+    margin: 2px;
+    width: 240px;
+    height: 215px;
+    display: inline-table;
+}
+.investidores {
     background-color: aqua;
     border: 5px solid black;
     margin: 2px;
@@ -67,7 +80,7 @@ body{
     border: 2px solid black;
     margin-top: 80px; 
     width: 175px;
-    height: 610px;
+    height: 680px;
     overflow: auto;
 }
 #menu{
@@ -77,6 +90,6 @@ body{
     border: 2px solid black;
     margin-top: 80px; 
     width: 175px;
-    height: 610px;
+    height: 680px;
     padding: 5px;
 }

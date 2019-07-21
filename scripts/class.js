@@ -211,7 +211,7 @@ class Investidor{
             dinheiroAtual -= this.getPreco();
             this.efeito(this.getReferencia());
             var invest = document.createElement('p');
-            invest.appendChild(document.createTextNode(this.Nome));
+            invest.appendChild(document.createTextNode(this.Nome.replace(/_/i, ' ')));
             divInvestAtivos.appendChild(invest);
         } else {
             alert("sem dinhero");
@@ -256,4 +256,15 @@ var Cleyton = new InvestidorType1('Cleyton', 'Lotes de Plantação de Algodão',
 var Gertrudes = new InvestidorType3('Gertrudes', 'Vendedora de Leite, Procura Parceria',0.00,none,"../recursosDeImagem/download.png");
 var Bruno = new InvestidorType3('Bruno', 'Vendedor de Caldo-de-Cana',0.00,none,"../recursosDeImagem/download.png");
 var Landa = new InvestidorType3('Landa', 'A Costureira',0.00,none,"../recursosDeImagem/download.png");
-
+var Toydiota = new InvestidorType1('Toydiota', 'Exportar Carros',0.00,Automobilística,"../recursosDeImagem/download.png");
+var VendasJá = new InvestidorType3('VendasJá', 'Parceria, Revendedora de Carros',0.00,none,"../recursosDeImagem/download.png");
+var Brastempo = new InvestidorType1('Brastempo', 'Vendas em Casa',0.00,Eletrodomésticos,"../recursosDeImagem/download.png");
+var Ricardo_Eletrico = new InvestidorType3('Ricardo_Eletrico', 'O Gerente Ficou Maluco',0.00,none,"../recursosDeImagem/download.png");
+var Stark_Indústrias = new InvestidorType1('Stark_Indústrias', 'Armas de Alta Tecnologia',0.00,Bélica,"../recursosDeImagem/download.png");
+var AgoraGun = new InvestidorType3('AgoraGun', 'Exportação de Armamento Para os EUA',0.00,none,"../recursosDeImagem/download.png");
+var Shoren = new InvestidorType1('Shoren', 'Centro de Pesquisa',0.00,Farmacêutica,"../recursosDeImagem/download.png");
+var Oscorpe = new InvestidorType3('Oscorpe', 'Remédios Genéricos Governamentais',0.00,none,"../recursosDeImagem/download.png");
+var Agabeee = new InvestidorType1('Agabeee', 'Fabricante de Bombas Petrolíferas',0.00,Petróleo,"../recursosDeImagem/download.png");
+var Petrobras = new InvestidorType3('Petrobras', 'Parceria com o Governo',0.00,none,"../recursosDeImagem/download.png");
+var Microsoftwares = new InvestidorType1('Microsoftwares', 'Empresa Promissora',0.00,Softwares,"../recursosDeImagem/download.png");
+var Baidula = new InvestidorType3('Baidula', 'Antivírus para Toda a Empresa',0.00,none,"../recursosDeImagem/download.png");

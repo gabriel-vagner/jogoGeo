@@ -3,6 +3,9 @@
     margin:0;
     padding: 0;
 }
+input{
+    border: 2px inset lightgray;
+}
 ::-webkit-scrollbar {
     width: 3px;
 }
@@ -88,8 +91,51 @@ body{
     left:0;
     background-color: aquamarine;
     border: 2px solid black;
-    margin-top: 60px; 
+    margin-top: 80px; 
     width: 175px;
     height: 680px;
     padding: 5px;
+}
+#imgLinda{
+    width: 165px;
+    height: 330px;
+}
+
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  #falas {
+    height: 300px;
+    width: 300px;
+    z-index: 150;
+    position: absolute;
+    left: 200px;
+    top: 240px;
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  
+  /* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+/* When moving the mouse over the close button */
+.closebtn:hover {
+   color: black;
 }

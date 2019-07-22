@@ -70,6 +70,7 @@ function indacadoresMaker() {
     var inputAno = document.createElement('input');
     inputAno.setAttribute('value', ano);
     inputAno.setAttribute('readonly', 'readonly');
+    inputAno.setAttribute('id', 'inputAno');
     divInter.appendChild(inputDinheroAtual);
     divInter.appendChild(quebr);
     divInter.appendChild(inputDinheroTotal);
@@ -92,7 +93,28 @@ function salvar() { // talvez nao seja utilizada
 
 function noticFix() {
     switch (ano) {
+        case 1578:
+            makeText('Rei D. Sebastião morre na batalha de Alcácer-Quibir, a um conflito em quem irá sucedê-lo, a economia desestabiliza e o preço do, até então monopólio, pau-brasil cai!', true);
+            Pau_Brasil.setValor(Pau_Brasil.getValor() - Pau_Brasil.getValor() * 0.2);
+            setTimeout(() => {
+                document.getElementById('corpo').removeChild(document.getElementById('falas'));
+                makeText('Oh-Oww… Temos um problema aqui! Isso vai acontecer muito no mercado futuramente, é bom manter um dinheiro guardado pra evitar a falência!', true);
+            }, 7000);
+            setTimeout(() => {
+                document.getElementById('corpo').removeChild(document.getElementById('falas'));
+            }, 16000);
+            setTimeout(() => {
+                makeText('Acho que você já tá preparado para a próxima fase da industrialização brasileira, vamos passar pra lá!', true);
+            }, 20000);
+            setTimeout(() => {
+                ano = 1822;
+                inputAno.setAttribute('value', ano);
+                noticFix();
+                Pau_Brasil.remove();
+            }, 30000);
+            break
         case 1822:
+            document.getElementById('corpo').removeChild(document.getElementById('falas'));
             Café.maker();
             Soja.maker();
             Cana.maker();
@@ -189,4 +211,62 @@ function noticCont(x) {
     conteudo.setAttribute('class', 'imgNoticias');
     conteudo.setAttribute('src', x);
     asideNotic.appendChild(conteudo);
+}
+function tutorial() {
+    makeText('Olá investidor, eu sou Linda', true);
+    setTimeout(() => {
+        document.getElementById('corpo').removeChild(document.getElementById('falas'));
+        makeText('Você é o mais novo funcionário da nossa Oken Investiments, como é de praste, nossos recém contratados precisam passar por uma simulação antes de começar a investir de verdade', true);
+    }, 3000);
+    setTimeout(() => {
+        document.getElementById('corpo').removeChild(document.getElementById('falas'));
+        makeText('Vamos começar pelo início, voltando para 1530, o descobrimento do Brasil!', true);
+        indacadoresMaker();
+        document.getElementById('inputAno').style.border = '6px solid red';
+    }, 9000);
+    setTimeout(() => {
+        document.getElementById('corpo').removeChild(document.getElementById('falas'));
+        document.getElementById('inputAno').style.border = '2px inset lightgray';
+        makeText('Aqui no começo é fácil, compre alguma ações de pau Brasil para começar a lucrar!', true);
+    }, 13000);
+    setTimeout(() => {
+        document.getElementById('corpo').removeChild(document.getElementById('falas'));
+        Pau_Brasil.maker();
+    }, 16000);
+    var interval = setInterval(() => {
+
+        if (Pau_Brasil.getAtiva() > 0) {
+            clearInterval(interval);
+            makeText('Muito bem! Aqui na ação podemos ver o dinheiro que você ganha e de quanto em quanto tempo! Alem da porcentagem de compra da sua empresa.', true);
+            document.getElementById('Pau_BrasilInput').style.border = '6px inset red';
+            document.getElementById('Pau_BrasilInput2').style.border = '6px inset red';
+            setTimeout(() => {
+                document.getElementById('corpo').removeChild(document.getElementById('falas'));
+                document.getElementById('Pau_BrasilInput').style.border = '2px inset lightgray';
+                document.getElementById('Pau_BrasilInput2').style.border = '2px inset lightgray';
+                makeText('Aqui em cima você pode ver sua atual e sua renda total, administre ela e não gaste tudo,é assim que te avaliamos!', true);
+                document.getElementById('inputDinheroAtual').style.border = '4px solid red';
+                document.getElementById('inputDinheroTotal').style.border = '4px solid red';
+            }, 9000);
+            setTimeout(() => {
+                document.getElementById('corpo').removeChild(document.getElementById('falas'));
+                document.getElementById('inputDinheroAtual').style.border = '2px inset lightgray';
+                document.getElementById('inputDinheroTotal').style.border = '2px inset lightgray';
+
+            }, 14000);
+        }
+    }, 1500);
+
+}
+function makeText(fala, s) {
+    var divAlert = document.createElement('div');
+    divAlert.setAttribute('class', 'alert');
+    s ? divAlert.setAttribute('id', 'falas') : console.log();
+    //var span = document.createElement('span');
+    //span.setAttribute('class', 'close')
+    // span.setAttribute('onclick', "this.parentElement.style.display='none'");
+    // span.appendChild(document.createTextNode('->'));
+    //divAlert.appendChild(span);
+    divAlert.appendChild(document.createTextNode(fala));
+    document.getElementById('corpo').appendChild(divAlert);
 }

@@ -122,6 +122,9 @@ class Empresa {
             document.getElementById(this.Nome + 'Input2').value = '100%';
         }
     }
+    remove(){
+        divPrinc.removeChild(document.getElementById(this.Nome + 'Div'));
+    }
 }
 var Café = new Empresa("Café", 100.00, 4000, 500,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Soja = new Empresa("Soja", 150.00, 3000, 700,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
@@ -135,6 +138,9 @@ var Petróleo = new Empresa("Petróleo", 500, 1000, 35000000.,"../recursosDeImag
 var Softwares = new Empresa("Softwares", 1500, 2000, 60000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Streaming = new Empresa("Streaming", 5000, 3000, 9000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Inteligência_Artificial = new Empresa("Inteligência_Artificial", 9999999, 5000, 99000000,"../recursosDeImagem/download.png");
+
+var Pau_Brasil = new Empresa('Pau_Brasil', 100.00, 4000, 500, "../recursosDeImagem/download.png");
+
 class Investidor{
     constructor(_n, _d, _p, _r, _m){
         this.Nome = _n;

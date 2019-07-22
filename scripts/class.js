@@ -130,13 +130,11 @@ var Tecidos = new Empresa("Tecidos", 75, 2000, 300,"../recursosDeImagem/download
 var Automobilística = new Empresa("Automobilística", 250.00, 3000, 4000.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Eletrodomésticos = new Empresa("Eletrodomésticos", 300.00,4000, 3500.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Bélica = new Empresa("Bélica", 80000, 5000, 800000,"../recursosDeImagem/download.png");
-
-var Farmacêutica = new Empresa("Farmacêutica", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Petróleo = new Empresa("Petróleo", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Softwares = new Empresa("Softwares", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Streaming = new Empresa("Streaming", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Inteligência_Artificial = new Empresa("Inteligência_Artificial", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-
+var Farmacêutica = new Empresa("Farmacêutica", 1000000, 20000, 9000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Petróleo = new Empresa("Petróleo", 500, 1000, 35000000.,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Softwares = new Empresa("Softwares", 1500, 2000, 60000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Streaming = new Empresa("Streaming", 5000, 3000, 9000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
+var Inteligência_Artificial = new Empresa("Inteligência_Artificial", 9999999, 5000, 99000000,"../recursosDeImagem/download.png");
 class Investidor{
     constructor(_n, _d, _p, _r, _m){
         this.Nome = _n;
@@ -250,22 +248,22 @@ class InvestidorType3 extends Investidor{
 }
 var none = 'investidores sem influencia direta em algum valor de uma empresa';
 
-var Claudio = new InvestidorType2('Claudio', 'Dono de Terras Férteis',0.00,none,"../recursosDeImagem/download.png");
-var Bruna = new InvestidorType1('Bruna', 'Máquinas para Moer Café',0.00,Café,"../recursosDeImagem/download.png");
-var Julio = new InvestidorType1('Julio', 'Escravos para Moer Cana',0.00,Cana,"../recursosDeImagem/download.png");
-var Cleyton = new InvestidorType1('Cleyton', 'Lotes de Plantação de Algodão',0.00,Tecidos,"../recursosDeImagem/download.png");
-var Gertrudes = new InvestidorType3('Gertrudes', 'Vendedora de Leite, Procura Parceria',0.00,none,"../recursosDeImagem/download.png");
-var Bruno = new InvestidorType3('Bruno', 'Vendedor de Caldo-de-Cana',0.00,none,"../recursosDeImagem/download.png");
-var Landa = new InvestidorType3('Landa', 'A Costureira',0.00,none,"../recursosDeImagem/download.png");
-var Toydiota = new InvestidorType1('Toydiota', 'Exportar Carros',0.00,Automobilística,"../recursosDeImagem/download.png");
-var VendasJá = new InvestidorType3('VendasJá', 'Parceria, Revendedora de Carros',0.00,none,"../recursosDeImagem/download.png");
-var Brastempo = new InvestidorType1('Brastempo', 'Vendas em Casa',0.00,Eletrodomésticos,"../recursosDeImagem/download.png");
-var Ricardo_Eletrico = new InvestidorType3('Ricardo_Eletrico', 'O Gerente Ficou Maluco',0.00,none,"../recursosDeImagem/download.png");
-var Stark_Indústrias = new InvestidorType1('Stark_Indústrias', 'Armas de Alta Tecnologia',0.00,Bélica,"../recursosDeImagem/download.png");
-var AgoraGun = new InvestidorType3('AgoraGun', 'Exportação de Armamento Para os EUA',0.00,none,"../recursosDeImagem/download.png");
-var Shoren = new InvestidorType1('Shoren', 'Centro de Pesquisa',0.00,Farmacêutica,"../recursosDeImagem/download.png");
-var Oscorpe = new InvestidorType3('Oscorpe', 'Remédios Genéricos Governamentais',0.00,none,"../recursosDeImagem/download.png");
-var Agabeee = new InvestidorType1('Agabeee', 'Fabricante de Bombas Petrolíferas',0.00,Petróleo,"../recursosDeImagem/download.png");
-var Petrobras = new InvestidorType3('Petrobras', 'Parceria com o Governo',0.00,none,"../recursosDeImagem/download.png");
-var Microsoftwares = new InvestidorType1('Microsoftwares', 'Empresa Promissora',0.00,Softwares,"../recursosDeImagem/download.png");
-var Baidula = new InvestidorType3('Baidula', 'Antivírus para Toda a Empresa',0.00,none,"../recursosDeImagem/download.png");
+var Claudio = new InvestidorType2('Claudio', 'Dono de Terras Férteis',3500,none,"../recursosDeImagem/download.png");
+var Bruna = new InvestidorType1('Bruna', 'Máquinas para Moer Café',3000,Café,"../recursosDeImagem/download.png");
+var Julio = new InvestidorType1('Julio', 'Escravos para Moer Cana',3000,Cana,"../recursosDeImagem/download.png");
+var Cleyton = new InvestidorType1('Cleyton', 'Lotes de Plantação de Algodão',3000,Tecidos,"../recursosDeImagem/download.png");
+var Gertrudes = new InvestidorType3('Gertrudes', 'Vendedora de Leite, Procura Parceria',2500,none,"../recursosDeImagem/download.png");
+var Bruno = new InvestidorType3('Bruno', 'Vendedor de Caldo-de-Cana',2500,none,"../recursosDeImagem/download.png");
+var Landa = new InvestidorType3('Landa', 'A Costureira',2500,none,"../recursosDeImagem/download.png");
+var Toydiota = new InvestidorType1('Toydiota', 'Exportar Carros',600000,Automobilística,"../recursosDeImagem/download.png");
+var VendasJá = new InvestidorType3('VendasJá', 'Parceria, Revendedora de Carros',550000,none,"../recursosDeImagem/download.png");
+var Brastempo = new InvestidorType1('Brastempo', 'Vendas em Casa',600000,Eletrodomésticos,"../recursosDeImagem/download.png");
+var Ricardo_Eletrico = new InvestidorType3('Ricardo_Eletrico', 'O Gerente Ficou Maluco',550000,none,"../recursosDeImagem/download.png");
+var Stark_Indústrias = new InvestidorType1('Stark_Indústrias', 'Armas de Alta Tecnologia',800000,Bélica,"../recursosDeImagem/download.png");
+var AgoraGun = new InvestidorType3('AgoraGun', 'Exportação de Armamento Para os EUA',7500000,none,"../recursosDeImagem/download.png");
+var Shoren = new InvestidorType1('Shoren', 'Centro de Pesquisa',35000000,Farmacêutica,"../recursosDeImagem/download.png");
+var Oscorpe = new InvestidorType3('Oscorpe', 'Remédios Genéricos Governamentais',30000000,none,"../recursosDeImagem/download.png");
+var Agabeee = new InvestidorType1('Agabeee', 'Fabricante de Bombas Petrolíferas',60000000,Petróleo,"../recursosDeImagem/download.png");
+var Petrobras = new InvestidorType3('Petrobras', 'Parceria com o Governo',55000000,none,"../recursosDeImagem/download.png");
+var Microsoftwares = new InvestidorType1('Microsoftwares', 'Empresa Promissora',9000000,Softwares,"../recursosDeImagem/download.png");
+var Baidula = new InvestidorType3('Baidula', 'Antivírus para Toda a Empresa',8500000,none,"../recursosDeImagem/download.png");

@@ -49,7 +49,12 @@ function comandos() {//comandos do console
                 noticCont('../recursosDeImagem/jornais/Level 2/Jornal 8.png');
                 noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
                 break;
-
+            case 'goToEnd':
+                ano = 2019;
+                break
+            case 'end':
+                gameEnd();
+                break
             default:
                 break;
         }
@@ -95,6 +100,7 @@ function noticFix() {
     switch (ano) {
         case 1578:
             makeText('Rei D. Sebastião morre na batalha de Alcácer-Quibir, a um conflito em quem irá sucedê-lo, a economia desestabiliza e o preço do, até então monopólio, pau-brasil cai!', true);
+            transitionAlert()
             Pau_Brasil.setValor(Pau_Brasil.getValor() - Pau_Brasil.getValor() * 0.2);
             setTimeout(() => {
                 document.getElementById('corpo').removeChild(document.getElementById('falas'));
@@ -105,6 +111,7 @@ function noticFix() {
             }, 16000);
             setTimeout(() => {
                 makeText('Acho que você já tá preparado para a próxima fase da industrialização brasileira, vamos passar pra lá!', true);
+                transitionAlert()
             }, 20000);
             setTimeout(() => {
                 ano = 1822;
@@ -140,7 +147,6 @@ function noticFix() {
             break;
         case 1850:
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 2.png');
-            dinheiroAtual -= 0.00
             break;
         case 1870:
             Bruno.getAtiva() ? Cana.setValor(Cana.getValor() - (0.4 * (Cana.getValor() * 0.2))) : Cana.setValor(Cana.getValor() - (Cana.getValor() * 0.2));
@@ -201,6 +207,7 @@ function noticFix() {
             Inteligência_Artificial.setValor(Inteligência_Artificial.getValor() + (Inteligência_Artificial.getValor() * 10));
             dinheiroAtual = 999999999999999.90
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
+            gameEnd()
             break;
         default:
             break;
@@ -214,6 +221,7 @@ function noticCont(x) {
 }
 function tutorial() {
     makeText('Olá investidor, eu sou Linda', true);
+    transitionAlert()
     setTimeout(() => {
         document.getElementById('corpo').removeChild(document.getElementById('falas'));
         makeText('Você é o mais novo funcionário da nossa Oken Investiments, como é de praste, nossos recém contratados precisam passar por uma simulação antes de começar a investir de verdade', true);
@@ -234,10 +242,10 @@ function tutorial() {
         Pau_Brasil.maker();
     }, 16000);
     var interval = setInterval(() => {
-
         if (Pau_Brasil.getAtiva() > 0) {
             clearInterval(interval);
             makeText('Muito bem! Aqui na ação podemos ver o dinheiro que você ganha e de quanto em quanto tempo! Alem da porcentagem de compra da sua empresa.', true);
+            transitionAlert()
             document.getElementById('Pau_BrasilInput').style.border = '6px inset red';
             document.getElementById('Pau_BrasilInput2').style.border = '6px inset red';
             setTimeout(() => {
@@ -269,4 +277,26 @@ function makeText(fala, s) {
     //divAlert.appendChild(span);
     divAlert.appendChild(document.createTextNode(fala));
     document.getElementById('corpo').appendChild(divAlert);
+}
+function gameEnd() {
+    var end = document.createElement('img');
+    end.setAttribute('src', '../recursosDeImagem/end.png');
+    end.setAttribute("id", "imgEnd");
+    end.style.opacity = 0.0;
+    document.getElementById('corpo').appendChild(end);
+    setTimeout(() => {
+        document.getElementById('imgEnd').style.transition = 'opacity 4s';
+        document.getElementById('imgEnd').style.opacity = 1.0;
+    }, 6000);
+    setTimeout(() => {
+        makeText('Muito bem, você está contratado! Caso queira, Aperte F5 para reiniciar a simulação', true);
+        transitionAlert();
+    }, 8000);
+}
+function transitionAlert() {
+    document.getElementById('falas').style.opacity = 0.0;
+    setTimeout(() => {
+        document.getElementById('falas').style.transition = 'opacity 0.3s';
+        document.getElementById('falas').style.opacity = 1.0;
+    }, 400)
 }

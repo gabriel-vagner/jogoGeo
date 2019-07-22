@@ -130,6 +130,7 @@ var Tecidos = new Empresa("Tecidos", 75, 2000, 300,"../recursosDeImagem/download
 var Automobilística = new Empresa("Automobilística", 250.00, 3000, 4000.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Eletrodomésticos = new Empresa("Eletrodomésticos", 300.00,4000, 3500.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Bélica = new Empresa("Bélica", 80000, 5000, 800000,"../recursosDeImagem/download.png");
+
 var Farmacêutica = new Empresa("Farmacêutica", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Petróleo = new Empresa("Petróleo", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
 var Softwares = new Empresa("Softwares", 500.50, 3000, 545.76,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais

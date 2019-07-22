@@ -92,9 +92,6 @@ function salvar() { // talvez nao seja utilizada
 
 function noticFix() {
     switch (ano) {
-        case 1578:
-            teste.getAtiva() ? console.log('funfa') : noticCont("../recursosDeImagem/download.png");
-            break;
         case 1822:
             Café.maker();
             Soja.maker();

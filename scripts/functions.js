@@ -260,8 +260,13 @@ function tutorial() {
                 document.getElementById('corpo').removeChild(document.getElementById('falas'));
                 document.getElementById('inputDinheroAtual').style.border = '2px inset lightgray';
                 document.getElementById('inputDinheroTotal').style.border = '2px inset lightgray';
-
+                makeText('Voce tambem pode conferir seus investidores disponiveis que lhe darão alguns bonos, sempre fique de olha para quando algum investidor aparecer', true);
+                document.getElementById('linkInvestidores').style.border = '6px solid red';
             }, 14000);
+            setTimeout(() => {
+                document.getElementById('corpo').removeChild(document.getElementById('falas'));
+                document.getElementById('linkInvestidores').style.border = 'none';
+            }, 19000);
         }
     }, 1500);
 

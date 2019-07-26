@@ -267,8 +267,8 @@ function tutorial() {
             document.getElementById('Pau_BrasilInput2').style.border = '6px inset red';
             setTimeout(() => {
                 document.getElementById('corpo').removeChild(document.getElementById('falas'));
-                document.getElementById('Pau_BrasilInput').style.border = '2px inset lightgray';
-                document.getElementById('Pau_BrasilInput2').style.border = '2px inset lightgray';
+                document.getElementById('Pau_BrasilInput').style.border = '1px solid black';
+                document.getElementById('Pau_BrasilInput2').style.border = '1px solid black';
                 makeText('Aqui em cima você pode ver sua atual e sua renda total, administre ela e não gaste tudo,é assim que te avaliamos!', true);
                 document.getElementById('inputDinheroAtual').style.border = '4px solid red';
                 document.getElementById('inputDinheroTotal').style.border = '4px solid red';
@@ -329,4 +329,9 @@ function destaqueInput(input) {
         input.style.transition = 'background-color 0.5s';
         input.style.backgroundColor = 'white';
     }, 1000);
+}
+
+function getBootstrapDeviceSize (){
+return $ ('# users-devices-size'). find('div: visible'). first (). attr ('id');
+
 }

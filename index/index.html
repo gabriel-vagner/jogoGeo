@@ -9,15 +9,30 @@
 
     <link rel="stylesheet" href="../estilo/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Bootstrap/js/jquery-3.4.1.js">
 
     <script src="../scripts/variable.js"></script>
     <script src="../scripts/class.js"></script>
     <script src="../scripts/functions.js"></script>
+   
+    <div id = "users-debice-size"></div>
+    <div id = "xs" class="visible-xs"></div>
+    <div id = "sm" class="visible-sm"></div>
+    <div id = "md" class="visible-md"></div>
+    <div id = "lg" class="visible-lg"></div>
+    </div>
+
+
+
+
+
+  
 
 
 </head>
 
 <body id='corpo'>
+   
     <div id="interface"></div>
     <aside id='noticias'></aside>
     <aside id='menu'>
@@ -34,7 +49,23 @@
     <div id="miniGame" class='tela'>
         <iframe id="miniJoguete" src="../miniGame/index.html" frameborder="0"></iframe>
     </div>
-    <div id="startMenu"><button id="startButton" onclick="this.parentElement.style.display='none'; tutorial()" >Start</button></div>
+    <div id="startMenu">
+    
+        <div class="container">
+
+                <div class="split left">
+                
+                <h1>Demo</h1>
+                <a href="#"  onclick="document.querySelector('#startMenu').style.display='none'; tutorial()" class="button">Iniciar</a>
+                </div>
+                <div class="split right">
+                <h1> Desenvolvedor</h1>
+                <a href="#"  onclick="document.querySelector('#startMenu').style.display='none'; tutorial()"  class="button">Iniciar</a>
+                </div>
+                    </div>
+                    <script src="../scripts/animation.js"></script>
+    
+    </div>
     <script>
         var asideNotic = document.querySelector('#noticias');
         var asideMenu = document.querySelector('#menu');

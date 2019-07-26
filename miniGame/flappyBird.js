@@ -24,7 +24,7 @@ var constant;
 var bX = 10;
 var bY = 150;
 
-var gravity = 1.5;
+var gravity = 1.0;
 
 var score = 0;
 

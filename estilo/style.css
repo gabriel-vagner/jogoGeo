@@ -1,5 +1,152 @@
+:root {
+    --container-bg-color: #333;
+    --left-bg-color: rgba(223, 39, 39, 0.7);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  
+  html, body {
+    padding:0;
+    margin:0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  
+  .button {
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 2.5rem;
+    padding-top: 1.3rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+  }
+  
+  .split.left .button:hover {
+    background-color: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color);
+  }
+  
+  .split.right .button:hover {
+    background-color: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color);
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+  }
+  
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .split.left {
+    left:0;
+    background: url('../recursosDeImagem/quebra.png');
+    background-size: cover;
+  }
+  
+  .split.left:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--left-bg-color);
+  }
+  
+  .split.right {
+    right:0;
+    background: url('../recursosDeImagem/99686.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.right:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--right-bg-color);
+  }
+  
+  .split.left, .split.right, .split.right:before, .split.left:before {
+    transition: var(--speed) all ease-in-out;
+  }
+  
+  .hover-left .left {
+    width: var(--hover-width);
+  }
+  
+  .hover-left .right {
+    width: var(--other-width);
+  }
+  
+  .hover-left .right:before {
+    z-index: 2;
+  }
+  
+  
+  .hover-right .right {
+    width: var(--hover-width);
+  }
+  
+  .hover-right .left {
+    width: var(--other-width);
+  }
+  
+  .hover-right .left:before {
+    z-index: 2;
+  }
+  
+  @media(max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .button {
+      width: 12rem;
+    }
+  }
+  
+  @media(max-height: 700px) {
+    .button {
+      top: 70%;
+    }
+  }
+
+
 
 *{
+ 
     margin:0;
     padding: 0;
 }
@@ -7,11 +154,15 @@ input{
     border: 2px inset lightgray;
 }
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 2px;
 }
 ::-webkit-scrollbar-thumb {
-    background: gray; 
+  
     border-radius: 10px;
+    padding: 1rem;
+    background: gray;
+    height: 250px;
+    overflow: auto;
 }
 #miniJoguete{
     margin-left: 300px;
@@ -20,20 +171,49 @@ input{
     overflow: hidden;
 }
 body{
+    background-image:-webkit-linear-gradient(top, rgb(179, 147, 99),rgb(199, 170, 123));
     overflow: hidden;
 }
+
 #investAtivos{
+    border: solid rgb(0, 0, 0) ;
+    border-radius: 5px;
     overflow: auto;
-    height: 280px;
+    height: 230px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    border-image: linear-gradient(to bottom, black, rgb(177, 177, 177)) 1 100%;
+  
+
+
    
 }
+h4{
+color:white;
+
+
+}
+.descricaoInvestidores{
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding: 3px;
+
+
+
+}
+
 .h2Empresas{
-    font-size: 25px; 
+    font-size: 23px; 
     margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 4px;
 }
 .h2Investidores{
-    font-size: 25px; 
-    margin: 0px;
+  font-size: 23px; 
+  margin: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 4px;
 }
 .tela{
     margin-left: 200px;
@@ -42,26 +222,82 @@ body{
     height: 760px;
     overflow: auto;
 }
-.empresas {
-    background-color: aqua;
-    border: 5px solid black;
+.empresas { 
+
+    border: 3px solid rgb(0, 0, 0);
     margin: 2px;
     width: 240px;
     height: 215px;
     display: inline-table;
+    border-radius: 5%;
+    background-image:-webkit-linear-gradient(top, rgb(196, 161, 108) ,rgb(117, 95, 64));
+    
+
 }
 .investidores {
-    background-color: aqua;
-    border: 5px solid black;
+    border: 3px solid black;
     margin: 2px;
     width: 240px;
     height: 215px;
     display: inline-table;
+    border-radius: 5%;
+    background-image:-webkit-linear-gradient(top, rgb(196, 161, 108) ,rgb(117, 95, 64));
+
+
+}
+
+.botaoEmpresas{
+border: 1px solid black;
+background: none;
+padding:7px 10px;
+font-size: 15px;
+font-family: sans-serif;
+cursor: pointer;
+margin: 2px;
+transition: 0.5s;
+border-radius: 7%;
+font-weight: bold;
+}
+
+
+.botaoEmpresas:hover{
+color: #fff;
+}
+
+
+.botaoEmpresas::before{
+content: "";
+position: absolute;
+left: 0;
+width: 100%;
+height: 0%;
+background: #fff;
+z-index: -1;
+transition: 0.5;
+}
+.botaoInvestidores{
+  border: 1px solid black;
+  border-radius: 10%;
+  background: none;
+  padding:7px 10px;
+  font-size: 15px;
+  font-family: sans-serif;
+  cursor: pointer;
+  margin: 2px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.botaoInvestidores:hover{
+  color: #fff;
+
+
+
 }
 #interface{
     margin-bottom: 10px;
     position: fixed;
-    right: 0;
+    right: 5px;
 }
 .imgNoticias{
     height: 270px;
@@ -78,24 +314,27 @@ body{
 #noticias{
     overflow: auto;
     position: fixed;
-    right:0;
-    background-color: aquamarine;
+    right:5px;
+    background-color: #FFDEAD	;
     border: 2px solid black;
     margin-top: 80px; 
     width: 175px;
     height: 680px;
     overflow: auto;
+    border-radius: 5px; 
+    background-image:-webkit-linear-gradient(top,  rgb(219, 183, 137) );
 }
 #menu{
     position: fixed;
-    left:0;
-    background-color: aquamarine;
+    left:5px;
+    background-color: #FFDEAD	;
     border: 2px solid black;
     margin-top: 80px; 
     width: 175px;
     height: 680px;
     padding: 5px;
-}
+    border-radius: 5px;
+    background-image:-webkit-linear-gradient(top,rgb(219, 183, 137) );}
 #imgLinda{
     width: 165px;
     height: 330px;
@@ -129,13 +368,31 @@ body{
     left: 200px;
     top: 240px;
     padding: 20px;
-    background-color: #f44336; /* Red */
+    background: radial-gradient(circle ,rgb(235, 53, 53),rgb(49, 23, 23));
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-color: #000000;
+    border-radius: 10%;
+    font-size: 20px;
+    animation: pulse 1s infinite;
+ 
   }
-  
-  
+   .pulse{
+animation: pulse 1 infinite;
+margin: 0 auto;
+display: table;
+margin-top: 50%;
+animation-direction: alternate;
+box-shadow:0px 0px 20px black;
+animation: pulse 1s ease-out infinite; 
+   }
+ @keyframes pulse{
+0% {box-shadow: 0px 0px 0px black;}
+50% { box-shadow: 0 0 15px black;}
+100% { box-shadow: 0px 0px 0px  black;}
+ }
   /* The close button */
 .closebtn {
     margin-left: 15px;
@@ -158,4 +415,339 @@ body{
     position: absolute;
     top: 0;
     z-index: 149;
+}
+#startButton{
+background:#8B4513;
+background-image: -webkit-linear-gradient(top, #8B4513, #D2691E);
+background-image: linear-gradient(to bottom,rgb(116, 59, 19),#D2691E );
+border-radius: 70px;
+font-family: helvetica;
+color: #ffffff;
+font-size: 30px;
+padding: 20px 20px 20px 20px;
+
+}
+#startButton:hover{
+    background: black;
+    background-image: -webkit-linear-gradient(top, black,rgb(32, 32, 32));
+    background-image: linear-gradient(to bottom,black,rgb(32, 32, 32));
+
+
+
+}
+#linkEmpresas{
+    color: black;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 20px;
+color: #222;
+text-shadow: 0px 2px 3px #555;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+
+
+
+
+#linkInvestidores{
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #222;
+  text-shadow: 0px 2px 3px #555;
+  text-decoration: none;
+  cursor: pointer;
+}
+#linkMiniGame{
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #222;
+  text-shadow: 0px 2px 3px #555;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+#CaféInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+#CaféInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#SojaInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+
+#SojaInput2{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+#CanaInput{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#CanaInput2{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#TecidosInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#TecidosInput2{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#AutomobilísticaInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#AutomobilísticaInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+#EletrodomésticosInput{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#EletrodomésticosInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#BélicaInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#BélicaInput2{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+#FarmacêuticaInput{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#FarmacêuticaInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#PetróleoInput{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#PetróleoInput2{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#SoftwaresInput{
+
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+}
+
+#SoftwaresInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+
+#StreamingInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#StreamingInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#Inteligência_ArtificialInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+
+#Inteligência_ArtificialInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+#Pau_BrasilInput{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
+
+}
+
+#Pau_BrasilInput2{
+  border:1px solid black;
+  background: none;
+  padding:3px 3px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 2px;
+  font-weight: bold;
 }

@@ -14,35 +14,27 @@
     <script src="../scripts/variable.js"></script>
     <script src="../scripts/class.js"></script>
     <script src="../scripts/functions.js"></script>
-   
-    <div id = "users-debice-size"></div>
-    <div id = "xs" class="visible-xs"></div>
-    <div id = "sm" class="visible-sm"></div>
-    <div id = "md" class="visible-md"></div>
-    <div id = "lg" class="visible-lg"></div>
+
+    <div id="users-debice-size"></div>
+    <div id="xs" class="visible-xs"></div>
+    <div id="sm" class="visible-sm"></div>
+    <div id="md" class="visible-md"></div>
+    <div id="lg" class="visible-lg"></div>
     </div>
-
-
-
-
-
-  
-
-
 </head>
 
 <body id='corpo'>
-   
+
     <div id="interface"></div>
     <aside id='noticias'></aside>
     <aside id='menu'>
-        <a id="linkEmpresas"href="#principal">Empresas</a><br>
-        <a id="linkInvestidores"href="#investidores">Investidores</a><br>
-        <a id="linkMiniGame"href="#miniGame">Joguete</a>
+        <a id="linkEmpresas" href="#principal">Empresas</a><br>
+        <a id="linkInvestidores" href="#investidores">Investidores</a><br>
+        <a id="linkMiniGame" href="#miniGame">Joguete</a>
         <div id="investAtivos">
             <h4>Investidores ativos:</h4>
         </div>
-        <img src="../recursosDeImagem/testes.jpg" id="imgLinda">
+        <img src="../recursosDeImagem/linda.png" id="imgLinda">
     </aside>
     <div id="principal" class='tela'></div>
     <div id="investidores" class='tela'></div>
@@ -50,21 +42,23 @@
         <iframe id="miniJoguete" src="../miniGame/index.html" frameborder="0"></iframe>
     </div>
     <div id="startMenu">
-    
+
         <div class="container">
 
-                <div class="split left">
-                
+            <div class="split left">
+
                 <h1>Demo</h1>
-                <a href="#"  onclick="document.querySelector('#startMenu').style.display='none'; tutorial()" class="button">Iniciar</a>
-                </div>
-                <div class="split right">
+                <a href="#" onclick="document.querySelector('#startMenu').style.display='none'; tutorial()"
+                    class="button">Iniciar</a>
+            </div>
+            <div class="split right">
                 <h1> Desenvolvedor</h1>
-                <a href="#"  onclick="document.querySelector('#startMenu').style.display='none'; tutorial()"  class="button">Iniciar</a>
-                </div>
-                    </div>
-                    <script src="../scripts/animation.js"></script>
-    
+                <a href="#" onclick="document.querySelector('#startMenu').style.display='none'; tutorial()"
+                    class="button">Iniciar</a>
+            </div>
+        </div>
+        <script src="../scripts/animation.js"></script>
+
     </div>
     <script>
         var asideNotic = document.querySelector('#noticias');
@@ -75,7 +69,7 @@
         var divMiniG = document.querySelector('#miniGame');
         var divInvestAtivos = document.querySelector('#investAtivos');
 
-        
+
     </script>
 
 

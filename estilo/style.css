@@ -143,8 +143,6 @@
     }
   }
 
-
-
 *{
  
     margin:0;
@@ -306,10 +304,16 @@ transition: 0.5;
 .imgEmpresas{
     height: 120px;
     width: 120px;
+    margin-left: 3px;
+    border: 3px solid black;
+    border-radius: 3px;
 }
 .imgInvestidores{
     height: 120px;
     width: 120px;
+    margin-left: 3px;
+    border: 3px solid black;
+    border-radius: 3px;
 }
 #noticias{
     overflow: auto;
@@ -336,8 +340,11 @@ transition: 0.5;
     border-radius: 5px;
     background-image:-webkit-linear-gradient(top,rgb(219, 183, 137) );}
 #imgLinda{
+    position: absolute;
     width: 165px;
     height: 330px;
+    left:0;
+    bottom: 0;
 }
 #startMenu{
     position: absolute;
@@ -353,7 +360,7 @@ transition: 0.5;
     margin-right: auto;
 }
 
-/* The alert message box */
+
 .alert {
     padding: 20px;
     background-color: #f44336; /* Red */
@@ -393,7 +400,7 @@ animation: pulse 1s ease-out infinite;
 50% { box-shadow: 0 0 15px black;}
 100% { box-shadow: 0px 0px 0px  black;}
  }
-  /* The close button */
+  
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -404,8 +411,7 @@ animation: pulse 1s ease-out infinite;
     cursor: pointer;
     transition: 0.3s;
   }
-  
-/* When moving the mouse over the close button */
+
 .closebtn:hover {
    color: black;
 }
@@ -444,11 +450,6 @@ text-shadow: 0px 2px 3px #555;
 text-decoration: none;
 cursor: pointer;
 }
-
-
-
-
-
 
 #linkInvestidores{
   color: black;
@@ -685,7 +686,6 @@ cursor: pointer;
   font-weight: bold;
 
 }
-
 
 #StreamingInput{
   border:1px solid black;

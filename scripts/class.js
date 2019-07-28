@@ -126,20 +126,20 @@ class Empresa {
         divPrinc.removeChild(document.getElementById(this.Nome + 'Div'));
     }
 }
-var Café = new Empresa("Café", 100.00, 4000, 500,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Soja = new Empresa("Soja", 150.00, 3000, 700,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Cana = new Empresa("Cana", 50.00, 2000, 250,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Tecidos = new Empresa("Tecidos", 75, 2000, 300,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Automobilística = new Empresa("Automobilística", 250.00, 3000, 4000.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Eletrodomésticos = new Empresa("Eletrodomésticos", 300.00,4000, 3500.00,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Bélica = new Empresa("Bélica", 80000, 5000, 800000,"../recursosDeImagem/download.png");
-var Farmacêutica = new Empresa("Farmacêutica", 1000000, 20000, 9000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Petróleo = new Empresa("Petróleo", 500, 1000, 35000000.,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Softwares = new Empresa("Softwares", 1500, 2000, 60000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Streaming = new Empresa("Streaming", 5000, 3000, 9000000,"../recursosDeImagem/download.png"); // necessario que objeto e atributo nome sejam iguais
-var Inteligência_Artificial = new Empresa("Inteligência_Artificial", 9999999, 5000, 99000000,"../recursosDeImagem/download.png");
+var Café = new Empresa("Café", 100.00, 4000, 500,"../recursosDeImagem/cafe.jfif"); // necessario que objeto e atributo nome sejam iguais
+var Soja = new Empresa("Soja", 150.00, 3000, 700,"../recursosDeImagem/soja.jfif"); // necessario que objeto e atributo nome sejam iguais
+var Cana = new Empresa("Cana", 50.00, 2000, 250,"../recursosDeImagem/cana.jfif"); // necessario que objeto e atributo nome sejam iguais
+var Tecidos = new Empresa("Tecidos", 75, 2000, 300,"../recursosDeImagem/tecido.jpg"); // necessario que objeto e atributo nome sejam iguais
+var Automobilística = new Empresa("Automobilística", 250.00, 3000, 4000.00,"../recursosDeImagem/carro.png"); // necessario que objeto e atributo nome sejam iguais
+var Eletrodomésticos = new Empresa("Eletrodomésticos", 300.00,4000, 3500.00,"../recursosDeImagem/eletro.jfif"); // necessario que objeto e atributo nome sejam iguais
+var Bélica = new Empresa("Bélica", 80000, 5000, 800000,"../recursosDeImagem/belica.jpg");
+var Farmacêutica = new Empresa("Farmacêutica", 1000000, 20000, 9000000,"../recursosDeImagem/remedios.jpg"); // necessario que objeto e atributo nome sejam iguais
+var Petróleo = new Empresa("Petróleo", 500, 1000, 35000000.,"../recursosDeImagem/petroleo.png"); // necessario que objeto e atributo nome sejam iguais
+var Softwares = new Empresa("Softwares", 1500, 2000, 60000000,"../recursosDeImagem/softwares.jpg"); // necessario que objeto e atributo nome sejam iguais
+var Streaming = new Empresa("Streaming", 5000, 3000, 9000000,"../recursosDeImagem/stremaing.png"); // necessario que objeto e atributo nome sejam iguais
+var Inteligência_Artificial = new Empresa("Inteligência_Artificial", 9999999, 5000, 99000000,"../recursosDeImagem/artificial_intelligence.jpg");
 
-var Pau_Brasil = new Empresa('Pau_Brasil', 100.00, 4000, 500, "../recursosDeImagem/download.png");
+var Pau_Brasil = new Empresa('Pau_Brasil', 100.00, 4000, 500, "../recursosDeImagem/paubrasil.jpg");
 
 class Investidor{
     constructor(_n, _d, _p, _r, _m){

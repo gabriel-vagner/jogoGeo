@@ -80,12 +80,13 @@ class Empresa {
         if (dinheiroAtual >= this.getPreco()) {
             dinheiroAtual -= this.getPreco();
             if (this.getAtiva() < 1) {
-                setInterval(function () {
+                empresaInterval = setInterval(function () {
                     dinheiroAtual += nome.getValor();
                     dinheiroTotal += nome.getValor();
                     inputDinheroAtual.setAttribute('value', 'R$' + dinheiroAtual.toFixed(2));
                     inputDinheroTotal.setAttribute('value', 'R$' + dinheiroTotal.toFixed(2));
                 }, nome.getTempo());
+                empresaInterval;
             }
             this.getAtiva() <= 10 ? this.ativacao() : console.log();
         } else {

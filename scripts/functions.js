@@ -98,6 +98,9 @@ function salvar() { // talvez nao seja utilizada
 
 function noticFix() {
     switch (ano) {
+        case 1540:
+            ano += 30;
+            break
         case 1578:
             makeText('Rei D. Sebastião morre na batalha de Alcácer-Quibir, a um conflito em quem irá sucedê-lo, a economia desestabiliza e o preço do, até então monopólio, pau-brasil cai!', true);
             transitionAlert()
@@ -118,6 +121,7 @@ function noticFix() {
                 inputAno.setAttribute('value', ano);
                 noticFix();
                 Pau_Brasil.remove();
+                clearInterval(empresaInterval);
             }, 30000);
             break
         case 1822:

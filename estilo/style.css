@@ -341,15 +341,15 @@ transition: 0.5;
     background-image:-webkit-linear-gradient(top,rgb(219, 183, 137) );}
 #imgLinda{
     position: absolute;
-    width: 150px;
-    height: 350px;
-    padding: 15px;
-  
+    width: 165px;
+    height: 330px;
+    left:0;
+    bottom: 0;
 }
 #startMenu{
     position: absolute;
     top: 0;
-    background-color: rgb(64, 92, 22);
+    background-color: #FFDEAD;
     width: 1366px;
     height: 768px;
 }

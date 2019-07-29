@@ -55,6 +55,10 @@ function comandos() {//comandos do console
             case 'end':
                 gameEnd();
                 break
+            case 'loli':
+                var img = document.getElementById('imgLinda');
+                img.setAttribute('src', '../recursosDeImagem/testes.png');
+                break
             default:
                 break;
         }
@@ -156,9 +160,9 @@ function noticFix() {
             Bruno.getAtiva() ? Cana.setValor(Cana.getValor() - (0.4 * (Cana.getValor() * 0.2))) : Cana.setValor(Cana.getValor() - (Cana.getValor() * 0.2));
             Gertrudes.getAtiva() ? Café.setValor(Café.getValor() - (0.4 * (Café.getValor() * 0.5))) : Café.setValor(Café.getValor() - (Café.getValor() * 0.5));
             Landa.getAtiva() ? Tecidos.setValor(Tecidos.getValor() - (0.4 * (Tecidos.getValor() * 0.1))) : Tecidos.setValor(Tecidos.getValor() - (Tecidos.getValor() * 0.1));
-            document.getElementById('CanaInput')?destaqueInput(document.getElementById('CanaInput')):console.log;
-            document.getElementById('CaféInput')?destaqueInput(document.getElementById('CaféInput')):console.log;
-            document.getElementById('TecidosInput')?destaqueInput(document.getElementById('TecidosInput')):console.log;
+            document.getElementById('CanaInput') ? destaqueInput(document.getElementById('CanaInput')) : console.log;
+            document.getElementById('CaféInput') ? destaqueInput(document.getElementById('CaféInput')) : console.log;
+            document.getElementById('TecidosInput') ? destaqueInput(document.getElementById('TecidosInput')) : console.log;
 
             Stark_Indústrias.maker();
             AgoraGun.maker();
@@ -171,11 +175,11 @@ function noticFix() {
             Bélica.setValor(Bélica.getValor() + (Bélica.getValor() * 0.7));
             VendasJá.getAtiva() ? Automobilística.setValor(Automobilística.getValor() - (0.4 * (Automobilística.getValor() * 0.2))) : Automobilística.setValor(Automobilística.getValor() - (Automobilística.getValor() * 0.2));
             Ricardo_Eletrico.getAtiva() ? Eletrodomésticos.setValor(Eletrodomésticos.getValor() - (0.4 * (Eletrodomésticos.getValor() * 0.3))) : Eletrodomésticos.setValor(Eletrodomésticos.getValor() - (Eletrodomésticos.getValor() * 0.3));
-            document.getElementById('BélicaInput')?destaqueInput(document.getElementById('BélicaInput')):console.log;
-            document.getElementById('AutomobilísticaInput')?destaqueInput(document.getElementById('AutomobilísticaInput')):console.log;
-            document.getElementById('EletrodomésticosInput')?destaqueInput(document.getElementById('EletrodomésticosInput')):console.log;
+            document.getElementById('BélicaInput') ? destaqueInput(document.getElementById('BélicaInput')) : console.log;
+            document.getElementById('AutomobilísticaInput') ? destaqueInput(document.getElementById('AutomobilísticaInput')) : console.log;
+            document.getElementById('EletrodomésticosInput') ? destaqueInput(document.getElementById('EletrodomésticosInput')) : console.log;
 
-            
+
             Farmacêutica.maker();
 
             Shoren.maker();
@@ -195,10 +199,10 @@ function noticFix() {
         case 1980:
             Oscorp.getAtiva() ? Farmacêutica.setValor(Farmacêutica.getValor() - (0.4 * (Farmacêutica.getValor() * 0.6))) : Farmacêutica.setValor(Farmacêutica.getValor() - (Farmacêutica.getValor() * 0.6));
             Petrobras.getAtiva() ? Petróleo.setValor(Petróleo.getValor() - (0.4 * (Petróleo.getValor() * 0.4))) : Petróleo.setValor(Petróleo.getValor() - (Petróleo.getValor() * 0.4));
-            document.getElementById('FarmacêuticaInput')?destaqueInput(document.getElementById('FarmacêuticaInput')):console.log;
-            document.getElementById('PetróleoInput')?destaqueInput(document.getElementById('PetróleoInput')):console.log;
+            document.getElementById('FarmacêuticaInput') ? destaqueInput(document.getElementById('FarmacêuticaInput')) : console.log;
+            document.getElementById('PetróleoInput') ? destaqueInput(document.getElementById('PetróleoInput')) : console.log;
 
-            
+
             break;
         case 1985:
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 7.png');
@@ -218,12 +222,12 @@ function noticFix() {
         case 2011:
             Inteligência_Artificial.maker();
             Baidula.getAtiva() ? Softwares.setValor(Softwares.getValor() - (0.4 * (Softwares.getValor() * 0.5))) : Softwares.setValor(Softwares.getValor() - (Softwares.getValor() * 0.5));
-            document.getElementById('SoftwaresInput')?destaqueInput(document.getElementById('SoftwaresInput')):console.log;
+            document.getElementById('SoftwaresInput') ? destaqueInput(document.getElementById('SoftwaresInput')) : console.log;
 
             break;
         case 2020:
             Inteligência_Artificial.setValor(Inteligência_Artificial.getValor() + (Inteligência_Artificial.getValor() * 10));
-            document.getElementById('Inteligência_ArtificialInput')?destaqueInput(document.getElementById('Inteligência_ArtificialInput')):console.log;
+            document.getElementById('Inteligência_ArtificialInput') ? destaqueInput(document.getElementById('Inteligência_ArtificialInput')) : console.log;
 
             dinheiroAtual = 999999999999999.90
             noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
@@ -335,7 +339,7 @@ function destaqueInput(input) {
     }, 1000);
 }
 
-function getBootstrapDeviceSize (){
-return $ ('# users-devices-size'). find('div: visible'). first (). attr ('id');
+function getBootstrapDeviceSize() {
+    return $('# users-devices-size').find('div: visible').first().attr('id');
 
 }

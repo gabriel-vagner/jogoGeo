@@ -214,8 +214,10 @@ padding: 3px;
   padding: 4px;
 }
 .tela{
-    margin-left: 200px;
-    margin-bottom: 50px;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 9999px;
     width: 980px;
     height: 760px;
     overflow: auto;
@@ -350,8 +352,8 @@ transition: 0.5;
     position: absolute;
     top: 0;
     background-color: #FFDEAD;
-    width: 1366px;
-    height: 768px;
+    width: 100%;
+    height: 100%;
 }
 #startButton{
     display: block;

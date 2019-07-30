@@ -18,6 +18,9 @@
     overflow-x: hidden;
   }
   
+  #h1StartMenu {
+    color: rgba(223, 39, 39, 0.7) ;
+  }
   h1 {
     font-size: 4rem;
     color: #fff;

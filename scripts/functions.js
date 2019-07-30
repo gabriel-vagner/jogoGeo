@@ -1,66 +1,68 @@
 document.addEventListener("keypress", comandos);// console para comandos de teste e facil demonstração do jogo
 function comandos() {//comandos do console
     if (event.keyCode == 39) {
-        comando = prompt('CONSOLE DE COMANDO');
-        switch (comando) {
-            case "demo":
-                dinheiroAtual = 9000000000;
-                ano = 6000;
-                Café.maker();
-                Soja.maker();
-                Cana.maker();
-                Tecidos.maker();
-                Automobilística.maker();
-                Eletrodomésticos.maker();
-                Bélica.maker();
-                Farmacêutica.maker();
-                Petróleo.maker();
-                Softwares.maker();
-                Streaming.maker();
-                Inteligência_Artificial.maker();
+        if (conso == true) {
+            comando = prompt('CONSOLE DE COMANDO');
+            switch (comando) {
+                case "demo":
+                    dinheiroAtual = 9000000000;
+                    ano = 6000;
+                    Café.maker();
+                    Soja.maker();
+                    Cana.maker();
+                    Tecidos.maker();
+                    Automobilística.maker();
+                    Eletrodomésticos.maker();
+                    Bélica.maker();
+                    Farmacêutica.maker();
+                    Petróleo.maker();
+                    Softwares.maker();
+                    Streaming.maker();
+                    Inteligência_Artificial.maker();
 
-                Claudio.maker();
-                Bruna.maker();
-                Julio.maker();
-                Cleyton.maker();
-                Gertrudes.maker();
-                Bruno.maker();
-                Landa.maker();
-                Toydiota.maker();
-                VendasJá.maker();
-                Brastempo.maker();
-                Ricardo_Eletrico.maker();
-                Stark_Indústrias.maker();
-                AgoraGun.maker();
-                Shoren.maker();
-                Oscorpe.maker();
-                Agabeee.maker();
-                Petrobras.maker();
-                Microsoftwares.maker();
-                Baidula.maker()
+                    Claudio.maker();
+                    Bruna.maker();
+                    Julio.maker();
+                    Cleyton.maker();
+                    Gertrudes.maker();
+                    Bruno.maker();
+                    Landa.maker();
+                    Toydiota.maker();
+                    VendasJá.maker();
+                    Brastempo.maker();
+                    Ricardo_Eletrico.maker();
+                    Stark_Indústrias.maker();
+                    AgoraGun.maker();
+                    Shoren.maker();
+                    Oscorpe.maker();
+                    Agabeee.maker();
+                    Petrobras.maker();
+                    Microsoftwares.maker();
+                    Baidula.maker()
 
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 1.png')
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 2.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 3.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 4.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 5.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 6.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 7.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 8.png');
-                noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
-                break;
-            case 'goToEnd':
-                ano = 2019;
-                break
-            case 'end':
-                gameEnd();
-                break
-            case 'loli':
-                var img = document.getElementById('imgLinda');
-                img.setAttribute('src', '../recursosDeImagem/testes.png');
-                break
-            default:
-                break;
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 1.png')
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 2.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 3.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 4.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 5.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 6.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 7.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 8.png');
+                    noticCont('../recursosDeImagem/jornais/Level 2/Jornal 9.png');
+                    break;
+                case 'goToEnd':
+                    ano = 2019;
+                    break
+                case 'end':
+                    gameEnd();
+                    break
+                case 'loli':
+                    var img = document.getElementById('imgLinda');
+                    img.setAttribute('src', '../recursosDeImagem/testes.png');
+                    break
+                default:
+                    break;
+            }
         }
     }
 }

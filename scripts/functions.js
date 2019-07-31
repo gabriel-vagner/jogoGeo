@@ -333,11 +333,11 @@ function transitionAlert() {
     }, 400)
 }
 function destaqueInput(input) {
-    input.style.transition = 'background-color 0.5s';
-    input.style.backgroundColor = 'red';
+    input.style.transition = 'background 0.5s';
+    input.style.background = '#FE3636';
     setTimeout(() => {
-        input.style.transition = 'background-color 0.5s';
-        input.style.backgroundColor = 'white';
+        input.style.transition = 'background 0.5s';
+        input.style.background = 'none';
     }, 1000);
 }
 
